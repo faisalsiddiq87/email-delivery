@@ -41,13 +41,11 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Implementation
-
 ## About The Implementation
 
 * The Implementation is done via `NestJS using TypeScript`.
 * Mail [Module](https://github.com/faisalsiddiq87/email-delivery/tree/master/src/mail) is responsible to process the request and send email.
-* MailService gets the request data via POST /mail End point and uses DeliverMailService to send email.
+* POST /mail End point sends data to MailService and MailService uses DeliverMailService for sending email.
 * MailService validates the input request data via [DTO](https://github.com/faisalsiddiq87/email-delivery/tree/master/src/mail/dto) before processing with deliverService.
 * TransformInterceptor [Middleware](https://github.com/faisalsiddiq87/email-delivery/tree/master/src/middleware) processess the response(success/failure) of send mail method and returns JSON output with status code.
 * SMTP creds config can be found [HERE](https://github.com/faisalsiddiq87/email-delivery/tree/master/src/config)
