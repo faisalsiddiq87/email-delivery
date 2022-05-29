@@ -48,7 +48,8 @@ $ npm run test:cov
 * The Implementation is done via `NestJS using TypeScript`.
 * Mail [Module](https://github.com/faisalsiddiq87/email-delivery/tree/master/src/mail) is responsible to process the request and send email.
 * MailService gets the request data via POST /mail End point and uses DeliverMailService to send email.
-* TransformInterceptor processess the response(success/failure) of send mail method and returns JSON out with status code.
+* MailService validates the input request data via [DTO](https://github.com/faisalsiddiq87/email-delivery/tree/master/src/mail/dto) before processing with deliverService.
+* TransformInterceptor [Middleware](https://github.com/faisalsiddiq87/email-delivery/tree/master/src/middleware) processess the response(success/failure) of send mail method and returns JSON output with status code.
 * SMTP creds config can be found [HERE](https://github.com/faisalsiddiq87/email-delivery/tree/master/src/config)
 * GMAIL SMTP credentials are used to send email [HOW SETUP GMAIL SMTP?](https://www.youtube.com/watch?v=1YXVdyVuFGA)
 * The project uses .env for environment, please copy .env.development to .env and replace SMTP_USER, SMTP_PASSWORD with your own creds.
