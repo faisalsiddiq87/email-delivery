@@ -55,4 +55,4 @@ $ npm run test:cov
 
 ## ScreenShots
 
-* Please review [screenshots](https://github.com/faisalsiddiq87/email-delivery/tree/master/test/images) of email calls and received emails.
+* Please review [screenshots](https://github.com/faisalsiddiq87/email-delivery/tree/master/test/images) for api calls via postman and received emails.
